@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+<body>
+
+<audio src="pop.mp3" id="song"></audio>
+
+	<script type="text/javascript">
+	
+		var clicks =0;
+	document.addEventListener("click", function(){
+		clicks = clicks+1
+		console.log(clicks)
+
+		if (clicks%2 == 1) {
+			document.body.style.backgroundImage= "url(https://images.unsplash.com/photo-1533371452382-d45a9da51ad9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b2NlYW4lMjBzdW5zZXR8ZW58MHx8MHx8&w=1000&q=80)"
+		song.play()
+
+		}
+
+		if (clicks%2 == 0) {document.body.style.backgroundImage= "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b2NlYW4lMjBzdW5yaXNlfGVufDB8fDB8fA%3D%3D&w=1000&q=80"}
+
+			;
+		song.pause()
+			
+			
+	})
+
+
+
+
+</script>
+</body>
+</html>
