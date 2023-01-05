@@ -5,26 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<style type="text/css">
-
-	</style>
+	#purple{
+		height: 500px;
+		width: 500px;
+		position: center;
+		backgorund-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(https://i.pinimg.com/originals/70/8e/93/708e9398a4b4bea08d7c61ff7a0f863f.gif);
+	}
+p{font: courier;
+	
+}
+</style>
 </head>
 <body>
 <div id = "purple"></div>
-<audio src = "song.mp3" id="song" controls></audio>
+<audio src = "song.mp3" id="song"></audio>
 <script type="text/javascript">
 let counter = 0;
 
-document.add.EventListener("click", function(){
+document.addEventListener("click", function(){
 	counter = counter + 1
 	console.log(counter)
 
-	if(counter%2 == 0){
-		song.pause()
-	}
-	if(counter%2 == 1){
+	 if(counter%2 == 1){
 		song.play()
 	} 
+	else if(counter%2 == 0){
+		song.pause()
+	}
+	
 })
 </script>
+<p>Click to play and pause free music!
+	
+</p>
 </body>
 </html>
