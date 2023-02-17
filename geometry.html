@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		
+		p{
+			font: courrier;
+		}
+
+		#box{
+			width:500px ;
+			height: 500px;
+/*			background-color: white ;
+*/			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<p>Click on the page for flashcards for parallel lines!</p>
+	<center><div id="box" ></div></center>
+
+
+
+	<script type="text/javascript">
+	var lines = ["url(Geometry1.png)", "url(Geometry2.png)", "url(Geometry3.png)", "url(Geometry4.png)", "url(Geometry5.png)", "url(Geometry6.png)", "url(Geometry7.png)", "url(Geometry8.png)"]
+
+	
+	document.addEventListener("click",function(){
+	var random = Math.round(Math.random()*7)
+	box.style.backgroundImage = lines[random]
+	// var top= event.clientY-50
+	// newImage.style.top= event.clientY+"px"
+ //  	var left= event.clientX-50
+	// newImage.style.left= left+"px"
+	// console.log(top*1000+left)
+})
+</script>
+</body>
+</html>

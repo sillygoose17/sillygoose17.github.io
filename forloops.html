@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.cookies{
+			width: 100px;
+			height: 100px;
+			
+			display: inline-block;
+			margin: 5px;
+			background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/ff/Domestic_goat_kid_in_capeweed.jpg);
+			background-repeat: no-repeat;
+			background-size: contain;
+
+		}
+
+
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	function makeCookie (placeholder){
+		var cookie = document.createElement("div");
+		document.body.appendChild(cookie)
+		cookie.classList.add('cookies');
+		cookie.innerText = placeholder;
+	}
+
+	for(var i=0; i<1000;i=i+1){
+		makeCookie(i)
+	}
+
+</script>
+</body>
+</html>

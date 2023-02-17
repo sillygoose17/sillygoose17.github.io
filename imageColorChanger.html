@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#pic{
+			width: 400px;
+			height: 800;
+			filter: hue-rotate(300deg);
+			
+		}
+				#photo{
+			width: 400px;
+			height: 800;
+			filter: hue-rotate(300deg);
+			
+		}
+	</style>
+</head>
+<body>
+
+<img src="Image2.jpg" id=pic></img>
+<img src="Image1.jpg" id=photo></img>
+<script type="text/javascript">
+
+	pic.addEventListener("mousemove", function(event){
+	pic.style.filter = "hue-rotate("+event.clientX+"deg)";
+
+})
+
+	photo.addEventListener("mousemove", function(event){
+	photo.style.filter = "hue-rotate("+event.clientX+"deg)";
+
+})
+	
+
+</script>
+</body>
+</html>
