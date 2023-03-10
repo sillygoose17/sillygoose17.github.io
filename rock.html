@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background: rgb(200, 200, 1000);
+		}
+		#player1{
+			height: 350px;
+			width: 350px;
+			border: 1px solid white;
+			font-size: 250px;
+			display: inline-block;
+
+		}
+		#player2{
+			height: 350px;
+			width: 350px;
+			border: 1px solid white;
+			font-size: 250px;
+			display: inline-block;
+
+		}
+		#scoreboard{
+			width: 700px;
+			height: 175px;
+			background-color: navajowhite;
+
+
+		}
+
+		.scores{
+			width: 330px;
+			height: 175px;
+			border: 1px solid white;
+			position: relative;
+			display: inline-block;
+
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+<center><div id="player1"></div>
+<div id="player2"></div></center>
+<center><div id="scoreboard">
+	<div class="scores" id="player1score"></div>
+	<div class="scores"  id="player2score"></div>
+
+
+</div></center>
+<script type="text/javascript">
+	var shape = ["🪨", "✂️", "🧻"]
+	var score1 = 0;
+	var score2 = 0;
+document.addEventListener("click",function(){
+	var random = Math.round(Math.random()*2)
+	player1.innerText = shape[random]
+	var random2 = Math.round(Math.random()*2)
+	player2.innerText = shape[random2]
+
+	function ifs (){
+	if(random==random2){
+		alert("Tie!") 
+	}
+	if(shape[random]=="🪨" && shape[random2]=="✂️"){
+		alert("Player 1 Wins!") 
+		score1 = score1 + 1
+	}
+	if(shape[random]=="✂️" && shape[random2]=="🪨"){
+		alert("Player 2 wins!") 
+		score2 = score2 + 1 	 
+	} 
+	if(shape[random]=="🪨" && shape[random2]=="🧻"){
+		alert("Player 2 Wins!") 
+		score2 = score2 + 1 
+	}
+	if(shape[random]=="✂️" && shape[random2]=="🧻"){
+		alert("Player 1 wins!") 
+		score1 = score1 + 1
+	}
+	if(shape[random]=="🧻" && shape[random2]=="🪨"){
+		alert("Player 1 Wins!") 
+		score1 = score1 + 1
+	}
+	if(shape[random]=="🧻" && shape[random2]=="✂️"){
+		alert("Player 2 Wins!") 
+		score2 = score2 + 1 
+	}
+
+	player1score.innerText = score1;
+	player2score.innerText = score2;
+}
+
+	setTimeout(ifs, 500)
+})
+	</script>
+</body>
+</html>
