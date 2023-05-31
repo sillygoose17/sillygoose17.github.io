@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		light{
+			background: url(https://web.colby.edu/cogblog/files/2017/04/Spotlight-1.jpg) no-repeat center fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 1000px;
+		}
+		#drum{
+			background-image: url(drum.png);
+			width: 250px;
+			height: 250px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		#box{
+			width:500px ;
+			height: 500px;
+/*			background-color: white ;
+*/			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+<center><div id="drum"></div></center>
+<div id="light"></div>
+<center><div id="box" ></div></center>
+    <audio id="audio" src="https://www.fesliyanstudios.com/play-mp3/6767"></audio>
+
+<script type="text/javascript">
+	var bars = ["url(Bar1.png)", "url(Bar2.png)", "url(Bar3.png)", "url(Bar4.png)", "url(Bar5.png)", "url(Bar6.png)", "url(Bar7.png)", "url(Bar8.png)"]
+
+	
+	document.addEventListener("click",function(){
+	var random = Math.round(Math.random()*7)
+	box.style.backgroundImage = bars[random]
+})
+	function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+
+      drum.addEventListener("click", play)
+    
+
+    </script>
+
+</input>
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	.circles{
+		height: 100px;
+		width: 100px;
+		background-color: blue;
+		border-radius: 50%;
+
+
+	}
+	</style>
+</head>
+<body>
+	
+	<script type="text/javascript">
+function makeCircle (){
+		var circle = document.createElement("div");
+		document.body.appendChild(circle)
+		circle.classList.add('circles');
+		function colorchange(){}
+	
+	}
+
+	for(var i=0; i<1000;i=i+1){
+		makeCircle(i)
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		h1{
+			font-family: courier;
+			color: navajowhite;
+		}
+body{
+			background: rgb(1000, 170, 150);
+		}
+		
+		#drum{
+			background-image: url(drum.png);
+			width: 250px;
+			height: 250px;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		#box{
+			width:500px ;
+			height: 500px;
+/*			background-color: white ;
+*/			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+ <center><h1>Sight Reading Machine</h1></center>
+<div id="light"></div>
+<center><div id="box" ></div></center>
+<center><div id="drum"></div></center>
+    <audio id="audio" src="drumsound2.m4a"></audio>
+
+<script type="text/javascript">
+	var bars = ["url(Bar1.png)", "url(Bar2.png)", "url(Bar3.png)", "url(Bar4.png)", "url(Bar5.png)", "url(Bar6.png)", "url(Bar7.png)", "url(Bar8.png)"]
+
+	
+	box.addEventListener("click",function(){
+	var random = Math.round(Math.random()*7)
+	box.style.backgroundImage = bars[random]
+
+})
+	function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+
+      drum.addEventListener("click", play)
+    
+
+    </script>
+
+</input>
+</script>
+</body>
+</html>

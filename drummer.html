@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<style type="text/css">
+  .drum {
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#snare {
+  background-color: #FF4500; /* orange color */
+}
+</style>
+</head>
+<body>
+  <h1>Sight Reading Machine</h1>
+  <div class="drum" id="snare"></div>
+
+  <script src="script.js">// Function to play the snare sound
+function playSnareSound() {
+  const snareSound = new Audio('snare.mp3');
+  snareSound.play();
+}
+
+// Event listener for the snare drum
+const snareDrum = document.getElementById('snare');
+snareDrum.addEventListener('click', playSnareSound);</script>
+</body>
+</html>
